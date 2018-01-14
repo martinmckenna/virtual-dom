@@ -125,7 +125,7 @@ body {
 .card {
     background-color: #F7f7f7;
     width: 33%;
-    margin: 2em;
+    margin: 1em 2em 2em 2em;
     flex-grow: 1;
     margin-bottom: 1em;
     border-radius: .5em;
