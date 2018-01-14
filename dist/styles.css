@@ -14,7 +14,15 @@ body,
 html {
     margin: 0;
     padding: 0;
-    background-color: #f4e6bc;
+    background-color: #FFE1C1;
+}
+
+a {
+    color: #3B96FB;
+}
+
+a:hover {
+    color: hotpink;
 }
 
 h1,
@@ -22,25 +30,35 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button {
     font-family: "Raleway", Arial, serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
 }
 
 div,
 p,
 span {
     font-family: "Libre Baskerville", Arial, sans-serif;
-    line-height: 1.6em;
+    line-height: 2.1em;
 }
 
 @media (max-width:500px) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-size: 1.3em
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.3em;
     }
     p,
     div,
@@ -108,32 +126,21 @@ BODY
 //
 */
 
-body {
-    display: flex;
-    justify-content: center;
-    /* Or do it all in one line
-      with flex flow */
-    flex-flow: row wrap;
-    /* tweak where items line
-       up on the row
-       valid values are: flex-start,
-       flex-end, space-between,
-       space-around, stretch */
-    align-content: flex-start;
+.about-desc {
+    padding: 0 2em;
+    text-align: left;
 }
 
 .card {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
     background-color: #F7f7f7;
-    width: 33%;
-    margin: 1em 2em 2em 2em;
-    flex-grow: 1;
-    margin-bottom: 1em;
     border-radius: .5em;
     padding: 1em;
-    -webkit-box-shadow: 0 5px 10px 5px #DBDBDB;
-    box-shadow: 0 5px 10px 5px #DBDBDB;
+    -webkit-box-shadow: 0 5px 10px 5px #B4B4B4;
+    box-shadow: 0 5px 10px 5px #B4B4B4;
     display: flex;
-    justify-content: center;
     /* Or do it all in one line
       with flex flow */
     flex-flow: row wrap;
@@ -143,18 +150,6 @@ body {
        flex-end, space-between,
        space-around, stretch */
     align-content: flex-start;
-}
-
-@media (max-width: 770px) {
-    .card {
-        width: 50%;
-    }
-}
-
-@media (max-width: 700px) {
-    .card {
-        margin: 1em;
-    }
 }
 
 .card-header {
@@ -175,10 +170,49 @@ body {
     width: 50%;
     flex-grow: 1;
     margin: 1em;
-    padding-top: 1em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+}
+
+.card-block button {
+    color: #F7f7f7;
+    font-size: 1.2em;
+    outline: none;
+    background-color: #63ABFB;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1em;
+    width: 60%;
+    padding: 1em;
+    -webkit-box-shadow: 0 7px 0 0 #3B96FB;
+    box-shadow: 0 7px 0 0 #3B96FB;
+    -webkit-transition: all .05s ease;
+    -moz-transition: all .05s ease;
+    -ms-transition: all .05s ease;
+    -o-transition: all .05s ease;
+    transition: all .05s ease;
+}
+
+.card-block button:active {
+    background: hotpink;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0 0 0 0 #3B96FB;
+    box-shadow: 0 0 0 0 #3B96FB;
+    -moz-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
 }
 
 @media (min-width: 450px) {
+    .card-block {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
     .card-block {
         width: 30%;
     }
@@ -186,22 +220,26 @@ body {
 
 @media (min-width: 1000px) {
     .card-block {
-        width: 10%;
+        width: 25%;
     }
 }
 
-.card-block:hover {
-    -moz-transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    transform: translateY(-3px);
-    background: lightblue;
-    border-radius: 3em;
+.card-block svg,
+.card-block i {
+    font-size: 3em;
+    width: 100% !important;
 }
 
-.card-block svg {
-    font-size: 2em;
+.fa-react {
+    color: #61dafb;
+}
+
+.devicon-webpack-plain {
+    color: #8DD6F9;
+}
+
+.devicon-typescript-plain {
+    color: #337ab7;
 }
 
 
@@ -216,8 +254,8 @@ body {
 
 footer {
     text-align: center;
-    margin: 1em;
-    width: 100%;
+    margin: 1em auto;
+    width: 70%;
 }
 
 .fa-heart {
