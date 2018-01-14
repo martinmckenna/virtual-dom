@@ -1,1 +1,5 @@
-console.log('hello worlfdfddsd');
+const date = new Date();
+
+document
+    .getElementById('year')
+    .innerText = date.getFullYear();
