@@ -46,7 +46,7 @@ h2 {
 
 div,
 p,
-span {
+span:not(.tingle-modal__closeIcon) {
     font-family: "Libre Baskerville", Arial, sans-serif;
     line-height: 2.1em;
 }
@@ -77,6 +77,12 @@ span {
 ///
 //
 */
+
+@media (min-width: 570px) {
+    .fa-bars {
+        display: none;
+    }
+}
 
 header {
     width: 100%;
@@ -261,4 +267,35 @@ footer {
 
 .fa-heart {
     color: #3B96FB;
+}
+
+
+/*
+//// 
+/////
+////////
+////MODALS 
+///
+///
+//*/
+
+@media (min-width: 541px) {
+    .tingle-modal-box {
+        width: 95% !important;
+    }
+}
+
+@media (min-width: 1500px) {
+    .tingle-modal-box {
+        width: 65% !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .tingle-modal-box p {
+        font-size: 1em;
+    }
+    .tingle-modal-box h2 {
+        font-size: 2em;
+    }
 }
