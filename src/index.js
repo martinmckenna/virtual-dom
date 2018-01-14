@@ -1,5 +1,8 @@
+import * as tingle from 'tingle.js';
+import './styles.css'
+
 const date = new Date();
-const yearOfBirth = 1994
+const yearOfBirth = 1994;
 
 document
     .getElementById('year')
@@ -11,4 +14,18 @@ if (date.getMonth() < 9) {
     age = age - 1;
 }
 
-document.getElementById('age').innerText = age;
+document
+    .getElementById('age')
+    .innerText = age;
+
+const modal = new tingle.modal({
+    footer: true,
+    stickyFooter: true,
+    closeMethods: [
+        'overlay', 'button', 'escape'
+    ],
+    closeLabel: 'Close',
+    cssClass: ['modal']
+})
+
+modal.open();
