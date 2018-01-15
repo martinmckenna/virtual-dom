@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:400,500');
-@import '../node_modules/tingle.js/dist/tingle.min.css';
+@import '../../node_modules/tingle.js/dist/tingle.min.css';
 
 /* 
 /////////
@@ -167,9 +167,9 @@ BODY
 .card-desc {
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid lightgray;
     padding-bottom: 1em;
     font-style: italic;
+    border-bottom: 1px solid lightgrey;
 }
 
 .card-block {
@@ -278,6 +278,10 @@ footer {
 ///
 ///
 //*/
+
+.tingle-modal-box {
+    background-color: #FFF0F0;
+}
 
 @media (min-width: 541px) {
     .tingle-modal-box {
