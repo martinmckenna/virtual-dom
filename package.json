@@ -1,0 +1,30 @@
+{
+  "name": "atmarty",
+  "version": "1.0.0",
+  "description": "atmarty.com",
+  "main": "index.js",
+  "repository": "git@github.com:martinmckenna/atmarty.git",
+  "author": "Marty <mmckenna.phila@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tingle.js": "^0.12.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
+  }
+}
