@@ -106,17 +106,27 @@ var readables = document.getElementById(elementSelectors[1]);
 var contactBook = document.getElementById(elementSelectors[2]);
 var crud = document.getElementById(elementSelectors[3]);
 
-var myReadsModal = void 0,
-    readablesModal = void 0,
-    contactBookModal = void 0,
-    crudModal = void 0;
-myReadsModal = readablesModal = contactBookModal = crudModal = new tingle.modal(_modal2.default);
+var myReadsModal = new tingle.modal(_modal2.default);
+var readablesModal = new tingle.modal(_modal2.default);
+var contactBookModal = new tingle.modal(_modal2.default);
+var crudModal = new tingle.modal(_modal2.default);
 
 var buttons = [myReads, readables, contactBook, crud];
 var modals = [myReadsModal, readablesModal, contactBookModal, crudModal];
 
+var myReadsContent = '<h2>My Reads <a target="_blank" href="https://github.com/martinmckenna/udacity-my-reads">(GitHub)</a></h2><p>My Reads is a library app that allows you to move books between bookshelves (Read, currently reading, and want to read). Users can switch books between shelves by clicking on the book and selecting which shelf they would like to move it to. Users may also search for new books to add to either shelf.</p><p>This project was developed as a coursework assignment for Udacity, built with React and Typescript</p>';
+
+var readablesContent = '<h2>Readables <a target="_blank" href="https://github.com/martinmckenna/readables">(GitHub)</a></h2><p>Readables is a Reddit clone that allows for basic social networking features, such as adding, deleting, and editing, filtering, and voting on posts. Each post is assigned to a category and can be viewed in their own specific category view.</p><p>This project was developed as a coursework assignment for Udacity, built with React, Redux, and Typescript</p>';
+
+var contactBookContent = '<h2>Contact Book <a target="_blank" href="https://github.com/martinmckenna/Contact-Book-App">(GitHub)</a></h2><p>Contact Book is an online contact book - pretty simple. App supports adding, deleting, and editing contacts. Users can also search through entered contacts.</p><p>This project was built with React, Meteor.js, and MongoDB</p>';
+
+var crudContent = '<h2>CRUD <a target="_blank" href="https://github.com/martinmckenna/crud">(GitHub)</a></h2><p>CRUD app is just a create, update, destroy app. Users may also search entries - pretty straightforward. Mainly built because I wanted to see how hard PHP/MySQL was.</p><p>This project was developed with PHP and MySQL</p>';
+
+var contentArray = [myReadsContent, readablesContent, contactBookContent, crudContent];
+
 modals.forEach(function (currentVal, index, array) {
-    currentVal.setContent('<h2>Hello World</h2><p>This project was the o This project was the one This project was the one This project was the one This project was the one This project was the one This project was the one v This project was the one v v This project was the one ne ThiThis project was the one This project was the one This project was the one This project was the one This project was the one This project was the one This project was the one This project was the one This project was the one This project was the one v v This project was the one v This project was the one This project was the one This project was the ones project was the one This project was the one This prThis project was the one This project was the one This project was the one This project was the one This project was the one This project was the oneoject was the one</p>');
+    console.log(currentVal);
+    currentVal.setContent(contentArray[index]);
     buttons[index].addEventListener('click', function () {
         currentVal.open();
     });
