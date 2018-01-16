@@ -15,7 +15,20 @@ body,
 html {
     margin: 0;
     padding: 0;
-    background-color: #FFE1C1;
+    background-color: #eeeeee;
+}
+
+body {
+    display: flex;
+    /* Or do it all in one line
+      with flex flow */
+    flex-flow: row wrap;
+    /* tweak where items line
+       up on the row
+       valid values are: flex-start,
+       flex-end, space-between,
+       space-around, stretch */
+    align-content: flex-start;
 }
 
 a {
@@ -139,24 +152,11 @@ BODY
 }
 
 .card {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1.5em;
+    width: 45%;
+    flex-grow: 1;
     background-color: #F7f7f7;
-    border-radius: .5em;
     padding: 1em;
-    -webkit-box-shadow: 0 5px 10px 5px #B4B4B4;
-    box-shadow: 0 5px 10px 5px #B4B4B4;
-    display: flex;
-    /* Or do it all in one line
-      with flex flow */
-    flex-flow: row wrap;
-    /* tweak where items line
-       up on the row
-       valid values are: flex-start,
-       flex-end, space-between,
-       space-around, stretch */
-    align-content: flex-start;
+    margin: 1em;
 }
 
 .card-header {
@@ -174,11 +174,7 @@ BODY
 
 .card-block {
     text-align: center;
-    width: 50%;
-    flex-grow: 1;
-    margin: 1em;
-    margin-top: 3.5em;
-    margin-bottom: 3.5em;
+    margin: 3em 0 3em 0;
 }
 
 .card-block button {
@@ -211,24 +207,6 @@ BODY
     -o-transform: translateY(3px);
     -ms-transform: translateY(3px);
     transform: translateY(3px);
-}
-
-@media (min-width: 450px) {
-    .card-block {
-        width: 50%;
-    }
-}
-
-@media (min-width: 800px) {
-    .card-block {
-        width: 30%;
-    }
-}
-
-@media (min-width: 1000px) {
-    .card-block {
-        width: 25%;
-    }
 }
 
 .card-block svg,
