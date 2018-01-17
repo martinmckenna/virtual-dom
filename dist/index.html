@@ -10,63 +10,39 @@
     <title>AtMarty - Home</title>
 </head>
 
-<header>
-    <div class="icon-bar">
-        <i class="fas fa-bars"></i>
-        <a href="mailto:mmckenna.phila@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/martinmckenna">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mmckenna14/">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-    </div>
-    <div class="logo">
-        <h1>Martin McKenna</h1>
-    </div>
-</header>
-
 <body>
+    <header>
+        <div class="icon-bar">
+            <i class="fas fa-bars"></i>
+            <a href="mailto:mmckenna.phila@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/martinmckenna">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mmckenna14/">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="logo">
+            <h1>Martin McKenna</h1>
+        </div>
+    </header>
     <div class="card">
         <h2 class="card-header">About</h2>
-        <p class="card-desc">Here are some facts about me</p>
         <p class="about-desc">I am a
-            <span id="age"></span> year old front-end developer from Philadelphia. I've specialize in building out functional user interfaces
+            <span id="age"></span>-year old front-end developer from Philadelphia. I specialize in building out functional user interfaces
             and Web APIs to create useful tools that anyone can easily use. Much of my experience lies in front-end development,
-            eCommerce, and client interaction. For everything development related, please refer to my
-            <a href="https://github.com/martinmckenna">GitHub account</a> or take a look at the
-            <a href="#projects">Projects section</a> below
+            eCommerce, and client interaction. Some of my preferred tools include React, Redux, and Webpack; however, I also
+            have experience with PHP and MySQL.
         </p>
-        <p class="about-desc">Other than that, Spider-man is my favorite super hero, Pierce the Veil is my favorite band, and Rocket League is
-            my favorite game.</p>
-    </div>
-    <div class="card fav-tools">
-        <h2 class="card-header">Favorite Tools</h2>
-        <p class="card-desc">These are the tools I've recently been using</p>
-        <div class="skill card-block">
-            <i class="fab fa-react"></i>
-            <h3>
-                <a target="_blank" href="https://reactjs.org/">React (and Redux!)</a>
-            </h3>
-        </div>
-        <div class="skill card-block">
-            <i class="devicon-typescript-plain"></i>
-            <h3>
-                <a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a>
-            </h3>
-        </div>
-        <div class="skill card-block">
-            <i class="devicon-webpack-plain"></i>
-            <h3>
-                <a target="_blank" href="https://webpack.js.org/">Webpack</a>
-            </h3>
-        </div>
+        <p class="about-desc">For everything development related, please refer to my
+            <a href="https://github.com/martinmckenna">GitHub account</a> or take a look at the
+            <a href="#projects">Projects section</a> below. Other than that, Spider-man is my favorite super hero, Pierce the Veil is my favorite
+            band, and Rocket League is my favorite game.</p>
     </div>
     <div id="projects" class="card projects">
         <h2 class="card-header">Projects</h2>
-        <p class="card-desc">These are the tools I've recently built</p>
         <div class="single-project card-block">
             <i class="fas fa-book"></i>
             <button id="myreads" class="proj-btn">My Reads</button>
@@ -84,13 +60,13 @@
             <button id="crud" class="proj-btn">CRUD</button>
         </div>
     </div>
+    <footer>
+        <span>Copyright
+            <span id="year"></span>. Made with
+            <i class="fas fa-heart"></i> lol</span>
+    </footer>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
 </body>
-<footer>
-    <span>Copyright
-        <span id="year"></span>. Made with
-        <i class="fas fa-heart"></i> lol</span>
-</footer>
-<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-<script src="bundle.js"></script>
 
 </html>

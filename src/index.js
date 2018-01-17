@@ -47,7 +47,6 @@ const crudContent = `<h2>CRUD <a target="_blank" href="https://github.com/martin
 const contentArray = [myReadsContent, readablesContent, contactBookContent, crudContent];
 
 modals.forEach((currentVal, index, array) => {
-    console.log(currentVal);
     currentVal.setContent(contentArray[index]);
     buttons[index].addEventListener('click', () => {
         currentVal.open();

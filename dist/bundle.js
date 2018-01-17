@@ -125,7 +125,6 @@ var crudContent = '<h2>CRUD <a target="_blank" href="https://github.com/martinmc
 var contentArray = [myReadsContent, readablesContent, contactBookContent, crudContent];
 
 modals.forEach(function (currentVal, index, array) {
-    console.log(currentVal);
     currentVal.setContent(contentArray[index]);
     buttons[index].addEventListener('click', function () {
         currentVal.open();
