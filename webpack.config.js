@@ -1,6 +1,7 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin"); // compile css
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // minimize css
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // make html file from template
 const webpack = require('webpack');
 
 module.exports = {
@@ -9,17 +10,12 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/')
     },
     devServer: {
-        contentBase: './dist',
+        contentBase: 'dist',
         watchContentBase: true
     },
-    plugins: [
-        new webpack
-            .optimize
-            .UglifyJsPlugin({include: /\.min\.js$/, minimize: true})
-    ],
     module: {
         rules: [
             {
@@ -64,6 +60,10 @@ module.exports = {
                 }
             },
             canPrint: true
-        })
+        }),
+        new webpack
+            .optimize
+            .UglifyJsPlugin({include: /\.min\.js$/, minimize: true}),
+        new HtmlWebpackPlugin({title: 'Custom Template', filename: '../index.html', template: './dist/index.html', inject: 'html'})
     ]
 };

@@ -5,33 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <title>AtMarty - Home</title>
+    <link href="dist/styles.min.css" rel="stylesheet">
 </head>
 
-<header>
-    <div class="icon-bar">
-        <i class="fas fa-bars"></i>
-        <a href="mailto:mmckenna.phila@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://github.com/martinmckenna">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mmckenna14/">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-    </div>
-    <div class="logo">
-        <h1>Martin McKenna</h1>
-    </div>
-</header>
-
 <body>
+    <header>
+        <div class="icon-bar">
+            <i class="fas fa-bars"></i>
+            <a href="mailto:mmckenna.phila@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/martinmckenna">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mmckenna14/">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="logo">
+            <h1>Martin McKenna</h1>
+        </div>
+    </header>
     <div class="card">
-        <h2 class="card-header">Abouttttt</h2>
-        <p class="card-desc">Here are some facts about me</p>
+        <h2 class="card-header">About</h2>
         <p class="about-desc">I am a
             <span id="age"></span>-year old front-end developer from Philadelphia. I specialize in building out functional user interfaces
             and Web APIs to create useful tools that anyone can easily use. Much of my experience lies in front-end development,
@@ -45,7 +43,6 @@
     </div>
     <div id="projects" class="card projects">
         <h2 class="card-header">Projects</h2>
-        <p class="card-desc">These are the tools I've recently built</p>
         <div class="single-project card-block">
             <i class="fas fa-book"></i>
             <button id="myreads" class="proj-btn">My Reads</button>
@@ -63,13 +60,13 @@
             <button id="crud" class="proj-btn">CRUD</button>
         </div>
     </div>
+    <footer>
+        <span>Copyright
+            <span id="year"></span>. Made with
+            <i class="fas fa-heart"></i> lol</span>
+    </footer>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
-<footer>
-    <span>Copyright
-        <span id="year"></span>. Made with
-        <i class="fas fa-heart"></i> lol</span>
-</footer>
-<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-<script src="bundle.js"></script>
 
 </html>
