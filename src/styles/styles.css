@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:400,500');
-@import '../../node_modules/tingle.js/dist/tingle.min.css';
-
 /* 
 /////////
 /////
@@ -81,7 +79,6 @@ span:not(.tingle-modal__closeIcon) {
     }
 }
 
-
 /*
 ///
 //
@@ -91,12 +88,6 @@ span:not(.tingle-modal__closeIcon) {
 //
 */
 
-@media (min-width: 570px) {
-    .fa-bars {
-        display: none;
-    }
-}
-
 header {
     width: 100%;
 }
@@ -104,10 +95,19 @@ header {
 header .icon-bar {
     text-align: right;
     background: #3B96FB;
+    line-height: 0;
 }
 
 header svg {
-    font-size: 1.8em !important;
+    height: auto;
+}
+
+.icon-bar a {
+    text-decoration: none;
+}
+
+header svg {
+    width: 5%;
     margin: .5em;
     color: white;
 }
@@ -135,7 +135,6 @@ header svg {
 .logo h2 {
     font-size: 2em;
 }
-
 
 /* 
 //
@@ -209,25 +208,6 @@ BODY
     transform: translateY(3px);
 }
 
-.card-block svg,
-.card-block i {
-    font-size: 3em;
-    width: 100% !important;
-}
-
-.fa-react {
-    color: #61dafb;
-}
-
-.devicon-webpack-plain {
-    color: #8DD6F9;
-}
-
-.devicon-typescript-plain {
-    color: #337ab7;
-}
-
-
 /* 
 //
 ///
@@ -237,47 +217,37 @@ BODY
 /////
 */
 
-footer {
+.copyright {
     text-align: center;
-    margin: 1em auto;
-    width: 70%;
+    padding-bottom: .5em;
 }
 
-.fa-heart {
+footer {
+    width: 100%;
+}
+
+footer .icon-bar {
+    text-align: right;
+    line-height: 0;
+}
+
+footer svg {
+    width: 7%;
+    padding: 1em;
+}
+
+#heart {
     color: #3B96FB;
 }
 
-
-/*
-//// 
-/////
-////////
-////MODALS 
-///
-///
-//*/
-
-.tingle-modal-box {
-    background-color: #FFF0F0;
-}
-
-@media (min-width: 541px) {
-    .tingle-modal-box {
-        width: 95% !important;
+@media (min-width: 875px) {
+    footer svg {
+        width: 5%;
     }
 }
 
-@media (min-width: 1500px) {
-    .tingle-modal-box {
-        width: 65% !important;
-    }
-}
-
-@media (max-width: 540px) {
-    .tingle-modal-box p {
-        font-size: 1em;
-    }
-    .tingle-modal-box h2 {
-        font-size: 2em;
+@media (min-width: 1400px) {
+    footer svg {
+        width: 3%;
     }
 }
