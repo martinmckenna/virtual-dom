@@ -1,5 +1,5 @@
+require('formdata-polyfill');
 import './styles/styles.css';
-import 'formdata-polyfill';
 import './components/contact';
 
 let today = new Date();
