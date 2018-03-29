@@ -10,8 +10,10 @@ const submitForm = e => {
     formToJSON[key] = value;
   }
 
+  console.log(formToJSON);
+
   return fetch('/email.php', {
-    body: formToJSON,
+    body: JSON.stringify(formToJSON),
     headers: {
       'Content-Type': 'application/json'
     },
