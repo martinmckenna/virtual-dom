@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:400,500");
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:400,500');
 /* 
 /////////
 /////
@@ -44,7 +44,7 @@ h4,
 h5,
 h6,
 button {
-  font-family: "Raleway", Arial, serif;
+  font-family: 'Raleway', Arial, serif;
 }
 
 h1 {
@@ -60,8 +60,12 @@ textarea,
 input,
 p,
 span:not(.tingle-modal__closeIcon) {
-  font-family: "Libre Baskerville", Arial, sans-serif;
+  font-family: 'Libre Baskerville', Arial, sans-serif;
   line-height: 2.1em;
+}
+
+textarea {
+  resize: vertical;
 }
 
 @media (max-width: 500px) {
@@ -109,20 +113,26 @@ header svg {
 }
 
 header svg {
-  width: 5%;
+  width: 25%;
   margin: 0.5em;
   color: white;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 475px) {
   header svg {
-    font-size: 2.3em !important;
+    width: 15%;
   }
 }
 
 @media (min-width: 900px) {
   header svg {
-    font-size: 2.5em !important;
+    width: 10%;
+  }
+}
+
+@media (min-width: 1400px) {
+  header svg {
+    width: 5%;
   }
 }
 
@@ -167,14 +177,12 @@ BODY
 .card-header {
   width: 100%;
   text-align: center;
+  line-height: 1.5em;
 }
 
 .card-desc {
-  width: 100%;
-  text-align: center;
-  padding-bottom: 1em;
-  font-style: italic;
-  border-bottom: 1px solid lightgrey;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .card-block {
@@ -254,6 +262,33 @@ form {
   border: 1px solid grey;
 }
 
+input[type='submit'] {
+  outline: none;
+  margin-top: 0.5em;
+  background-color: #3b96fb;
+  color: #f7f7f7;
+  font-size: 1.1em;
+  width: 50%;
+  border-radius: 1em;
+  border: none;
+  -webkit-box-shadow: 0 7px 0 0 #0059be;
+  box-shadow: 0 7px 0 0 #0059be;
+  -webkit-transition: all 0.05s ease;
+  -moz-transition: all 0.05s ease;
+  -ms-transition: all 0.05s ease;
+  -o-transition: all 0.05s ease;
+  transition: all 0.05s ease;
+}
+
+input[type='submit']:active {
+  box-shadow: 0 0 0 0 #3b96fb;
+  -moz-transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
 /* 
 //
 ///
@@ -278,7 +313,7 @@ footer .icon-bar {
 }
 
 footer svg {
-  width: 7%;
+  width: 15%;
   padding: 1em;
 }
 
@@ -286,7 +321,13 @@ footer svg {
   color: #3b96fb;
 }
 
-@media (min-width: 875px) {
+@media (min-width: 475px) {
+  footer svg {
+    width: 10%;
+  }
+}
+
+@media (min-width: 900px) {
   footer svg {
     width: 5%;
   }
