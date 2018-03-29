@@ -2,14 +2,18 @@ const submitForm = e => {
   e.preventDefault();
 
   let formData = new FormData(form);
-  formData.append('name', document.getElementById('input-name').value);
-  formData.append('email', document.getElementById('input-email').value);
-  formData.append('desc', document.getElementById('input-desc').value);
+
+  let formToJSON = {};
+
+  // turn the form data into a json object
+  for (const [key, value] of formData.entries()) {
+    jsonObject[key] = value;
+  }
 
   return fetch('/email.php', {
-    body: formData,
+    body: formToJSON,
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+      'Content-Type': 'application/json'
     },
     method: 'POST'
   }).then(response => {
