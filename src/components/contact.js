@@ -24,9 +24,9 @@ const submitForm = e => {
         alert('Message sent successfully!');
       } else {
         alert('There was an issue sending your message. Please try again!');
-        form.reset();
-        quizAnswer.style.borderColor = 'grey';
       }
+      form.reset();
+      quizAnswer.style.borderColor = 'grey';
     });
   } else {
     alert('Please answer the quiz answer correctly!');
