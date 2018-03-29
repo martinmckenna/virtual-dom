@@ -1,15 +1,18 @@
-const submitForm = (e, formData) => {
+const submitForm = (e, form) => {
   e.preventDefault();
-  alert("hello world!");
+
+  let formData = new FormData(form);
+  formData.append("name", document.getElementById("input-name").value);
+  formData.append("email", document.getElementById("input-email").value);
+  formData.append("desc", document.getElementById("input-desc").value);
+
   return fetch("/email.php", {
     body: JSON.stringify(formData),
     method: "POST"
   }).then(response => {
     console.log(response);
-    alert("form submitted!");
   });
 };
 
 const form = document.getElementById("contact-form");
-const formData = new FormData(form);
-form.addEventListener("submit", e => submitForm(e, formData));
+form.addEventListener("submit", e => submitForm(e, form));
