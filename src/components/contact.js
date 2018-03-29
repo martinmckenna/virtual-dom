@@ -7,7 +7,7 @@ const submitForm = e => {
 
   // turn the form data into a json object
   for (const [key, value] of formData.entries()) {
-    jsonObject[key] = value;
+    formToJSON[key] = value;
   }
 
   return fetch('/email.php', {
