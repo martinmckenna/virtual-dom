@@ -9,3 +9,5 @@ require '../../vendor/autoload.php';
 $content = trim(file_get_contents("php://input"));
 
 file_put_contents('logs.txt', print_r($content, true)."\n\n", FILE_APPEND);
+
+echo 'hello world';
