@@ -1,4 +1,4 @@
-const submitForm = (e, form) => {
+const submitForm = e => {
   e.preventDefault();
 
   let formData = new FormData(form);
@@ -8,6 +8,10 @@ const submitForm = (e, form) => {
 
   return fetch("/email.php", {
     body: formData,
+    headers: {
+      Accept: "application/json, application/xml, text/plain, text/html, *.*",
+      "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
+    },
     method: "POST"
   }).then(response => {
     console.log(response);
@@ -15,4 +19,4 @@ const submitForm = (e, form) => {
 };
 
 const form = document.getElementById("contact-form");
-form.addEventListener("submit", e => submitForm(e, form));
+form.addEventListener("submit", e => submitForm(e));
