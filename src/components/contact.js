@@ -7,7 +7,7 @@ const submitForm = (e, form) => {
   formData.append("desc", document.getElementById("input-desc").value);
 
   return fetch("/email.php", {
-    body: JSON.stringify(formData),
+    body: formData,
     method: "POST"
   }).then(response => {
     console.log(response);
