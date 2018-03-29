@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:400,500');
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:400,500");
 /* 
 /////////
 /////
@@ -11,30 +11,30 @@
 
 body,
 html {
-    margin: 0;
-    padding: 0;
-    background-color: #ddd;
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
 }
 
 body {
-    display: flex;
-    /* Or do it all in one line
+  display: flex;
+  /* Or do it all in one line
       with flex flow */
-    flex-flow: row wrap;
-    /* tweak where items line
+  flex-flow: row wrap;
+  /* tweak where items line
        up on the row
        valid values are: flex-start,
        flex-end, space-between,
        space-around, stretch */
-    align-content: flex-start;
+  align-content: flex-start;
 }
 
 a {
-    color: #3B96FB;
+  color: #3b96fb;
 }
 
 a:hover {
-    color: hotpink;
+  color: hotpink;
 }
 
 h1,
@@ -44,39 +44,41 @@ h4,
 h5,
 h6,
 button {
-    font-family: "Raleway", Arial, serif;
+  font-family: "Raleway", Arial, serif;
 }
 
 h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 h2 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 div,
+textarea,
+input,
 p,
 span:not(.tingle-modal__closeIcon) {
-    font-family: "Libre Baskerville", Arial, sans-serif;
-    line-height: 2.1em;
+  font-family: "Libre Baskerville", Arial, sans-serif;
+  line-height: 2.1em;
 }
 
-@media (max-width:500px) {
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.8em;
-    }
-    h3 {
-        font-size: 1.3em;
-    }
-    p,
-    div,
-    span {
-        font-size: .9em;
-    }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  p,
+  div,
+  span {
+    font-size: 0.9em;
+  }
 }
 
 /*
@@ -89,51 +91,51 @@ span:not(.tingle-modal__closeIcon) {
 */
 
 header {
-    width: 100%;
+  width: 100%;
 }
 
 header .icon-bar {
-    text-align: right;
-    background: #3B96FB;
-    line-height: 0;
+  text-align: right;
+  background: #3b96fb;
+  line-height: 0;
 }
 
 header svg {
-    height: auto;
+  height: auto;
 }
 
 .icon-bar a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header svg {
-    width: 5%;
-    margin: .5em;
-    color: white;
+  width: 5%;
+  margin: 0.5em;
+  color: white;
 }
 
 @media (min-width: 600px) {
-    header svg {
-        font-size: 2.3em !important;
-    }
+  header svg {
+    font-size: 2.3em !important;
+  }
 }
 
 @media (min-width: 900px) {
-    header svg {
-        font-size: 2.5em !important;
-    }
+  header svg {
+    font-size: 2.5em !important;
+  }
 }
 
 .icon-bar .fa-bars {
-    float: left;
+  float: left;
 }
 
 .logo {
-    text-align: center;
+  text-align: center;
 }
 
 .logo h2 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 /* 
@@ -146,66 +148,110 @@ BODY
 */
 
 .about-desc {
-    padding: 0 2em;
-    text-align: left;
+  padding: 0 2em;
+  text-align: left;
 }
 
 .card {
-    width: 45%;
-    flex-grow: 1;
-    background-color: #F7f7f7;
-    padding: 1em;
-    margin: 1em;
+  width: 45%;
+  flex-grow: 1;
+  background-color: #f7f7f7;
+  padding: 1em;
+  margin: 1em;
+}
+
+.card.project {
+  width: 20%;
 }
 
 .card-header {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .card-desc {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 1em;
-    font-style: italic;
-    border-bottom: 1px solid lightgrey;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1em;
+  font-style: italic;
+  border-bottom: 1px solid lightgrey;
 }
 
 .card-block {
-    text-align: center;
-    margin: 3em 0 3em 0;
+  text-align: center;
+  margin: 3em 0 3em 0;
 }
 
 .card-block button {
-    color: #F7f7f7;
-    font-size: 1.2em;
-    outline: none;
-    background-color: #63ABFB;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1em;
-    width: 60%;
-    padding: 1em;
-    -webkit-box-shadow: 0 7px 0 0 #3B96FB;
-    box-shadow: 0 7px 0 0 #3B96FB;
-    -webkit-transition: all .05s ease;
-    -moz-transition: all .05s ease;
-    -ms-transition: all .05s ease;
-    -o-transition: all .05s ease;
-    transition: all .05s ease;
+  color: #f7f7f7;
+  font-size: 1.2em;
+  outline: none;
+  background-color: #63abfb;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  width: 60%;
+  padding: 1em;
+  -webkit-box-shadow: 0 7px 0 0 #3b96fb;
+  box-shadow: 0 7px 0 0 #3b96fb;
+  -webkit-transition: all 0.05s ease;
+  -moz-transition: all 0.05s ease;
+  -ms-transition: all 0.05s ease;
+  -o-transition: all 0.05s ease;
+  transition: all 0.05s ease;
 }
 
 .card-block button:active {
-    background: hotpink;
-    outline: none;
-    border: none;
-    -webkit-box-shadow: 0 0 0 0 #3B96FB;
-    box-shadow: 0 0 0 0 #3B96FB;
-    -moz-transform: translateY(3px);
-    -webkit-transform: translateY(3px);
-    -o-transform: translateY(3px);
-    -ms-transform: translateY(3px);
-    transform: translateY(3px);
+  background: hotpink;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 #3b96fb;
+  box-shadow: 0 0 0 0 #3b96fb;
+  -moz-transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+@media (max-width: 1280px) {
+  .card.contact {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card.project {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  .card.project {
+    width: 90%;
+  }
+}
+
+/* 
+//
+///
+//////
+///////Contact Form
+//
+/////
+*/
+
+form {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-field {
+  width: 90%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid grey;
 }
 
 /* 
@@ -218,36 +264,36 @@ BODY
 */
 
 .copyright {
-    text-align: center;
-    padding-bottom: .5em;
+  text-align: center;
+  padding-bottom: 0.5em;
 }
 
 footer {
-    width: 100%;
+  width: 100%;
 }
 
 footer .icon-bar {
-    text-align: right;
-    line-height: 0;
+  text-align: right;
+  line-height: 0;
 }
 
 footer svg {
-    width: 7%;
-    padding: 1em;
+  width: 7%;
+  padding: 1em;
 }
 
 #heart {
-    color: #3B96FB;
+  color: #3b96fb;
 }
 
 @media (min-width: 875px) {
-    footer svg {
-        width: 5%;
-    }
+  footer svg {
+    width: 5%;
+  }
 }
 
 @media (min-width: 1400px) {
-    footer svg {
-        width: 3%;
-    }
+  footer svg {
+    width: 3%;
+  }
 }
