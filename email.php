@@ -30,6 +30,8 @@ try {
     ' . $message;
     $mail->send();
     file_put_contents('logs.txt', print_r($mail, true)."\n\n", FILE_APPEND);
+    echo "mail sent!";
 } catch (Exception $e) {
     file_put_contents('logs.txt', print_r($mail->ErrorInfo, true)."\n\n", FILE_APPEND);
+    echo $mail->ErrorInfo;
 }
