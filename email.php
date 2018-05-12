@@ -14,18 +14,20 @@ $email = $content->email;
 $name = $content->name;
 $message = $content->desc;
 
-$mail = new PHPMailer(true);           // Passing `true` enables exceptions
-try {                                  // TCP port to connect to
-    $mail->SMTPSecure = 'tls';
-
+$mail = new PHPMailer(true); // Passing `true` enables exceptions
+try {
     //Recipients
-    $mail->setFrom("test@gmail.com", 'Mailer');
-    $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');     // Add a recipient
+    $mail->setFrom($email, 'Mailer');
+    $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');
 
     //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(true);
     $mail->Subject = 'ATMARTY Email';
-    $mail->Body    = 'testing';
+    $mail->Body    = 'Name: ' . $name . '
+    
+    ' . 'Email: ' . $email . '
+    
+    ' . $message;
     $mail->send();
     file_put_contents('logs.txt', print_r($mail, true)."\n\n", FILE_APPEND);
 } catch (Exception $e) {
