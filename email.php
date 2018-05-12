@@ -30,6 +30,7 @@ try {                                  // TCP port to connect to
     
     ' . $message;
     $mail->send();
+    file_put_contents('logs.txt', print_r($mail, true)."\n\n", FILE_APPEND);
 } catch (Exception $e) {
     file_put_contents('logs.txt', print_r($mail->ErrorInfo, true)."\n\n", FILE_APPEND);
 }
