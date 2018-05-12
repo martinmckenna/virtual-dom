@@ -21,7 +21,7 @@ try {
     $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');
 
     //Content
-    $mail->isHTML(true);
+    // $mail->isHTML(true);
     $mail->Subject = 'ATMARTY Email';
     $mail->Body    = 'Name: ' . $name . '
     
