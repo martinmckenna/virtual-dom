@@ -1,8 +1,5 @@
 <?php
 
-//Load Composer's autoloader
-require './vendor/autoload.php';
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -14,24 +11,10 @@ $email = $content->email;
 $name = $content->name;
 $message = $content->desc;
 
-$mail = new PHPMailer(true); // Passing `true` enables exceptions
-try {
-    //Recipients
-    $mail->setFrom($email, 'Mailer');
-    $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');
+mail('mmckenna.phila@gmail.com', 'ATMARTY: From ' . $email, 'Name: ' . $name . '
 
-    //Content
-    // $mail->isHTML(true);
-    $mail->Subject = 'ATMARTY Email';
-    $mail->Body    = 'Name: ' . $name . '
-    
-    ' . 'Email: ' . $email . '
-    
-    ' . $message;
-    $mail->send();
-    file_put_contents('logs.txt', print_r($mail, true)."\n\n", FILE_APPEND);
-    echo "mail sent!";
-} catch (Exception $e) {
-    file_put_contents('logs.txt', print_r($mail->ErrorInfo, true)."\n\n", FILE_APPEND);
-    echo $mail->ErrorInfo;
-}
+' . 'Email ' . $email . '
+
+' . $message);
+
+file_put_contents('logs.txt', print_r($content, true)."\n\n", FILE_APPEND);
