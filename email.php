@@ -16,9 +16,11 @@ $message = $content->desc;
 
 $mail = new PHPMailer(true); // Passing `true` enables exceptions
 try {
+
     //Recipients
     $mail->setFrom($email, 'Mailer');
     $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');
+    $mail->addReplyTo('marty@atmarty.com', 'an email from the site');
 
     //Content
     $mail->isHTML(true);
