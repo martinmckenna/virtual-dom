@@ -23,9 +23,7 @@ try {
     //Content
     $mail->isHTML(true);
     $mail->Subject = 'ATMARTY Email';
-    $mail->Body = 'Name: ' . $name . '
-    Email: ' . $email . '
-    ' . $message;
+    $mail->Body = '<h3>Name: ' . $name . '</h3><h3>Email: ' . $email . '</h3><p>' . $message . '</p>';
     $mail->send();
     file_put_contents('logs.txt', print_r($mail, true)."\n\n", FILE_APPEND);
     echo "mail sent!";
