@@ -1,9 +1,12 @@
 import './styles/styles.css';
-import './bloop';
+import './bloop/Bloop';
+import { Component } from './bloop/Component';
 
-const Hello = () => {
-  return Bloop.createElement('div', null, 'Hello World')
+class Hello extends Component {
+  render() {
+    return Bloop.createElement('div', null, `Hello World`);
+  }
 }
 
-const helloWorld = Bloop.createElement(Hello, null, `Hello World`);
+const helloWorld = Bloop.createElement(Hello, null, null);
 BloopDOM.render(helloWorld, document.getElementById('app'));
