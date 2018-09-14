@@ -1,4 +1,5 @@
-import { isClass, isStatelessComponent } from './utils';
+import { isClass, isStatelessComponent, handleHTMLAttributes } from './utils';
+import { Component } from './Component'
 
 (() => {
   /**
@@ -6,7 +7,7 @@ import { isClass, isStatelessComponent } from './utils';
    * @param {Element} element - the HTML element to render the content into
    * @param {string || Component} children - strings or Components
    */
-  const anElement = (element, children) => {
+  const anElement = (element, props, children) => {
     /*
      * Here we're dealing with a class component
      * so instead of returning whatever is returned,
@@ -14,7 +15,7 @@ import { isClass, isStatelessComponent } from './utils';
      * method 
      */
     if (isClass(element)) {
-      const component = new element();
+      const component = new element(props);
       return component.render();
     }
 
@@ -24,7 +25,7 @@ import { isClass, isStatelessComponent } from './utils';
      * in the function passed 
      */
     if (isStatelessComponent(element)) {
-      return element();
+      return element(props);
     }
 
     const anElement = document.createElement(element);
@@ -36,18 +37,19 @@ import { isClass, isStatelessComponent } from './utils';
         anElement.innerHTML += eachChild;
       }
     });
-    return anElement;
+    return handleHTMLAttributes(anElement, props, children);
   }
 
   const createElement = (el, props, ...children) => {
-    return anElement(el, children);
+    return anElement(el, props, children);
   }
 
-  window.Bloop = {
-    createElement
+  window.Grump = {
+    createElement,
+    Component
   };
 
-  window.BloopDOM = {
+  window.GrumpDOM = {
     render: (el, domEl) => {
       domEl.appendChild(el);
     }

@@ -1,12 +1,28 @@
 import './styles/styles.css';
-import './bloop/Bloop';
-import { Component } from './bloop/Component';
+import './grump/Grump';
 
-class Hello extends Component {
+class Hello extends Grump.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0,
+    }
+  }
+
+  handleClick = () => {
+    alert(this.props.name);
+  };
+
   render() {
-    return Bloop.createElement('div', null, `Hello World`);
+    return Grump.createElement('button', {onClick: this.handleClick}, `Hello ${this.props.name}`);
   }
 }
 
-const helloWorld = Bloop.createElement(Hello, null, null);
-BloopDOM.render(helloWorld, document.getElementById('app'));
+const Time = ({ time }) => {
+  return Grump.createElement('div', null, `It is ${time} oclock`)
+}
+
+console.log(document.getElementById('app'));
+
+const helloWorld = Grump.createElement(Hello, { name: 'Joe' }, null);
+GrumpDOM.render(helloWorld, document.getElementById('app'));

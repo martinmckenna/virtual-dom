@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js start
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
 
 PATH: 
-  C:\Users\mmcke\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mmcke\bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY;C:\HashiCorp\Vagrant\bin;C:\Users\mmcke\Homestead;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_172\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\JetBrains\PyCharm Community Edition 2018.1.4\bin;C:\Users\mmcke\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\mmcke\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\mmcke\AppData\Local\Programs\Python\Python37;C:\Users\mmcke\AppData\Local\Microsoft\WindowsApps;C:\Users\mmcke\AppData\Roaming\Composer\vendor\bin;C:\Users\mmcke\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\mmcke\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\mmcke\AppData\Local\Yarn\bin;C:\Users\mmcke\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\mmcke\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mmcke\bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\ProgramData\chocolatey\bin;C:\Program Files\PuTTY;C:\HashiCorp\Vagrant\bin;C:\Users\mmcke\Homestead;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_172\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\JetBrains\PyCharm Community Edition 2018.1.4\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\mmcke\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\mmcke\AppData\Local\Programs\Python\Python37;C:\Users\mmcke\AppData\Local\Microsoft\WindowsApps;C:\Users\mmcke\AppData\Roaming\Composer\vendor\bin;C:\Users\mmcke\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\mmcke\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\mmcke\AppData\Local\Yarn\bin;C:\Users\mmcke\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.5.1
@@ -5423,17 +5423,4 @@ Lockfile:
       readable-stream "^2.0.0"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: C:\Program Files\git\bin\bash.exe
-  Arguments: -c webpack-dev-server
-  Directory: C:\Users\mmcke\code\virtual-dom
-  Output:
-  
-      at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
-      at new ProcessTermError (C:\Program Files (x86)\Yarn\lib\cli.js:226:113)
-      at ChildProcess.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:30281:17)
-      at emitTwo (events.js:126:13)
-      at ChildProcess.emit (events.js:214:7)
-      at maybeClose (internal/child_process.js:925:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\mmcke\code\virtual-dom\node_modules\.bin\webpack-dev-server'

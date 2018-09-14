@@ -16,3 +16,19 @@ export const isClass = (func) => {
 export const isStatelessComponent = (func) => {
   return typeof func === 'function'
 }
+
+export const handleHTMLAttributes = (element, props, children) => {
+  const anElement = element;
+  Object.keys(props).map(eachProp => {
+    /*
+     * If the the prop begins with 'on', add an event listener
+     * otherwise, just add the prop as an HTML attribute to the element
+     */
+    if (/^on.*$/.test(eachProp)) {
+      anElement.addEventListener(eachProp.substring(2).toLowerCase(), props[eachProp]);
+    } else {
+      anElement.setAttribute(eachProp, props[eachProp]);
+    };
+  });
+  return anElement;
+}
